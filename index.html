@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter PIN</title>
+  <style>
+    body {
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f5f5f5;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    input {
+      padding: 10px;
+      width: 200px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: black;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h3>Enter PIN</h3>
+    <input type="password" id="pin" placeholder="****" maxlength="4"/>
+    <br>
+    <button onclick="checkPIN()">Enter</button>
+  </div>
+
+  <script>
+    function checkPIN() {
+      const correctPIN = "1701"; // change this
+      let userPIN = document.getElementById("pin").value;
+
+      if (userPIN === correctPIN) {
+        window.location.href = "content.html"; // page to show after login
+      } else {
+        alert("Incorrect PIN");
+      }
+    }
+  </script>
+</body>
+</html>

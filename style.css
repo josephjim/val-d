@@ -1,0 +1,404 @@
+ *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --bg: #f5e6eb;
+        --fg: #3d1f2a;
+        --primary: #c75480;
+        --primary-fg: #fff;
+        --accent: #d9587b;
+        --muted: #a07080;
+        --card-bg: rgba(255, 245, 248, 0.55);
+        --card-border: rgba(255, 245, 248, 0.3);
+        --card-shadow: 0 8px 32px rgba(199, 84, 128, 0.12);
+        --radius: 1rem;
+      }
+      body {
+        font-family: "Lora", serif;
+        color: var(--fg);
+        background: linear-gradient(135deg, #f2dae0, #edcdd5, #f5e4da, #f0d5df);
+        min-height: 100vh;
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", serif;
+      }
+      /* ===== Glassmorphism Card ===== */
+      .glass {
+        background: var(--card-bg);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid var(--card-border);
+        box-shadow: var(--card-shadow);
+        border-radius: var(--radius);
+      }
+      /* ===== Floating Hearts ===== */
+      .floating-hearts {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .floating-hearts .heart {
+        position: absolute;
+        color: var(--primary);
+        opacity: 0.07;
+      }
+      /* ===== Animations ===== */
+      @keyframes heartFloat {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-20px) rotate(5deg);
+        }
+        50% {
+          transform: translateY(-10px) rotate(-3deg);
+        }
+        75% {
+          transform: translateY(-25px) rotate(3deg);
+        }
+      }
+      @keyframes heartDrift {
+        0%,
+        100% {
+          transform: translateX(0) translateY(0);
+        }
+        33% {
+          transform: translateX(15px) translateY(-15px);
+        }
+        66% {
+          transform: translateX(-10px) translateY(-25px);
+        }
+      }
+      @keyframes heartWobble {
+        0%,
+        100% {
+          transform: rotate(0deg) scale(1);
+        }
+        25% {
+          transform: rotate(8deg) scale(1.05);
+        }
+        50% {
+          transform: rotate(-5deg) scale(0.98);
+        }
+        75% {
+          transform: rotate(3deg) scale(1.02);
+        }
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes modalEnter {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .anim-float {
+        animation: heartFloat 6s ease-in-out infinite;
+      }
+      .anim-float-slow {
+        animation: heartFloat 10s ease-in-out infinite;
+      }
+      .anim-drift {
+        animation: heartDrift 8s ease-in-out infinite;
+      }
+      .anim-wobble {
+        animation: heartWobble 4s ease-in-out infinite;
+      }
+      .fade-up {
+        opacity: 0;
+        animation: fadeUp 0.8s ease-out forwards;
+      }
+      .delay-1 {
+        animation-delay: 0.1s;
+      }
+      .delay-2 {
+        animation-delay: 0.3s;
+      }
+      .delay-3 {
+        animation-delay: 0.5s;
+      }
+      /* ===== Layout ===== */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        position: relative;
+        z-index: 1;
+      }
+      /* ===== Hero ===== */
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 70vh;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+      .hero h1 {
+        font-size: clamp(2.8rem, 8vw, 4.5rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.5rem;
+      }
+      .hero p {
+        font-size: 1.15rem;
+        color: var(--muted);
+        max-width: 520px;
+        margin-bottom: 2.5rem;
+      }
+      .hero-hearts {
+        display: flex;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+      /* ===== Button ===== */
+      .btn-primary {
+        background: var(--primary);
+        color: var(--primary-fg);
+        border: none;
+        padding: 0.9rem 2rem;
+        border-radius: 50px;
+        font-family: "Lora", serif;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(199, 84, 128, 0.25);
+        transition: all 0.3s ease;
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(199, 84, 128, 0.4);
+      }
+      /* ===== Section Divider ===== */
+      .divider {
+        display: flex;
+        justify-content: center;
+        gap: 0.6rem;
+        padding: 1rem 0;
+        opacity: 0.2;
+      }
+      .divider svg {
+        color: var(--primary);
+      }
+      /* ===== Section Title ===== */
+      .section-title {
+        text-align: center;
+        font-size: clamp(1.6rem, 4vw, 2.2rem);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .section-sub {
+        text-align: center;
+        color: var(--muted);
+        margin-bottom: 2.5rem;
+        font-size: 1rem;
+      }
+      /* ===== Card Grid ===== */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        padding: 3rem 0;
+      }
+      .card {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .card:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 12px 40px rgba(199, 84, 128, 0.18);
+      }
+      .card p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      .card svg {
+        color: var(--accent);
+      }
+      /* ===== Spotify ===== */
+      .spotify-section {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
+      .spotify-card {
+        padding: 1.5rem;
+      }
+      .spotify-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+      }
+      .spotify-card iframe {
+        border-radius: 12px;
+        width: 100%;
+      }
+      /* ===== Video Section ===== */
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        padding: 2rem 0 4rem;
+      }
+      .video-card {
+        overflow: hidden;
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .video-card:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 12px 40px rgba(199, 84, 128, 0.18);
+      }
+      .video-placeholder {
+        aspect-ratio: 9 / 16;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .video-placeholder.v1 {
+        background: linear-gradient(
+          135deg,
+          rgba(199, 84, 128, 0.15),
+          rgba(217, 88, 123, 0.15)
+        );
+      }
+      .video-placeholder.v2 {
+        background: linear-gradient(
+          135deg,
+          rgba(217, 88, 123, 0.15),
+          rgba(211, 130, 155, 0.15)
+        );
+      }
+      .video-placeholder.v3 {
+        background: linear-gradient(
+          135deg,
+          rgba(211, 130, 155, 0.15),
+          rgba(199, 84, 128, 0.15)
+        );
+      }
+      .play-btn {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background: rgba(199, 84, 128, 0.15);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(199, 84, 128, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .play-btn svg {
+        color: var(--primary);
+        margin-left: 3px;
+      }
+      .video-heart {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: var(--accent);
+        opacity: 0.3;
+      }
+      .video-note {
+        padding: 1.25rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--muted);
+        font-style: italic;
+      }
+      /* ===== Modal ===== */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      .modal-overlay.active {
+        display: flex;
+      }
+      .modal-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(61, 31, 42, 0.2);
+        backdrop-filter: blur(6px);
+      }
+      .modal-content {
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        padding: 2.5rem;
+        text-align: center;
+        animation: modalEnter 0.35s ease-out forwards;
+      }
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: var(--muted);
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+      .modal-close:hover {
+        color: var(--fg);
+      }
+      .modal-content h3 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+      }
+      .modal-content p {
+        color: var(--muted);
+        margin-bottom: 1rem;
+        line-height: 1.7;
+      }
+      /* ===== Footer ===== */
+      footer {
+        text-align: center;
+        padding: 3rem 0;
+        color: var(--muted);
+        font-size: 0.85rem;
+        opacity: 0.6;
+      }
+      footer svg {
+        display: inline;
+        vertical-align: middle;
+      }
+      /* ===== SVG Heart Helper ===== */
+      .heart-icon {
+        display: inline-block;
+      }

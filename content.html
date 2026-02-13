@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Valentine's Day 💕</title>
+    <meta
+      name="description"
+      content="A heartfelt Valentine's Day message made with love."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lora:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+    <!-- Hero Section -->
+    <section class="hero fade-up">
+      <div class="hero-hearts">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="none"
+          style="color: var(--accent)"
+        >
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          />
+        </svg>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="none"
+          style="color: var(--primary); opacity: 0.6"
+        >
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          />
+        </svg>
+      </div>
+      <h1>Happy Valentine's Day Dunmininu </h1>
+      <p>
+        A little reminder of how special you are and how much brightness you
+        bring into every day.
+      </p>
+      <button class="btn-primary" onclick="openModal()">
+        Read My Message 💌
+      </button>
+      <div style="display: flex; gap: 0.5rem; margin-top: 3rem; opacity: 0.4">
+        <svg
+          width="10"
+          height="10"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="none"
+          style="color: var(--primary)"
+        >
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          />
+        </svg>
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="none"
+          style="color: var(--accent)"
+        >
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          />
+        </svg>
+        <svg
+          width="10"
+          height="10"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="none"
+          style="color: var(--primary)"
+        >
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          />
+        </svg>
+      </div>
+    </section>
+    <!-- Divider -->
+    <div class="divider">
+      <svg
+        width="8"
+        height="8"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+      >
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        />
+      </svg>
+      <svg
+        width="12"
+        height="12"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+        style="color: var(--accent)"
+      >
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        />
+      </svg>
+      <svg
+        width="8"
+        height="8"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+      >
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        />
+      </svg>
+    </div>
+    <!-- Appreciation Cards -->
+    <div class="container">
+      <h2 class="section-title">Little Notes of Love</h2>
+      <div class="card-grid">
+        <div class="glass card fade-up delay-1">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <p>I appreciate the fact that you alwasy seem to care about everything i have to say</p>
+        </div>
+        <div class="glass card fade-up delay-2">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+            />
+          </svg>
+          <p>Thank you for always being supportive to me</p>
+        </div>
+        <div class="glass card fade-up delay-3">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"
+            />
+          </svg>
+          <p>Thank you for Your Love</p>
+        </div>
+        <div class="glass card fade-up delay-1">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+            />
+          </svg>
+          <p>Wishing you a day filled with joy and love.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="divider">
+      <svg
+        width="8"
+        height="8"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+        style="color: var(--accent)"
+      >
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        />
+      </svg>
+      <svg
+        width="12"
+        height="12"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+      >
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        />
+      </svg>
+      <svg
+        width="8"
+        height="8"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+        style="color: var(--accent)"
+      >
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        />
+      </svg>
+    </div>
+    
+    <!-- Divider -->
+    <div class="divider">
+      <svg
+        width="8"
+        height="8"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+      >
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        />
+      </svg>
+      <svg
+        width="12"
+        height="12"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+        style="color: var(--accent)"
+      >
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        />
+      </svg>
+      <svg
+        width="8"
+        height="8"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+      >
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        />
+      </svg>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+        style="color: var(--accent); margin-right: 4px"
+      >
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        />
+      </svg>
+      Made with love, just for you
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+        style="color: var(--accent); margin-left: 4px"
+      >
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        />
+      </svg>
+    </footer>
+    <!-- Modal -->
+    <div class="modal-overlay" id="messageModal">
+      <div class="modal-backdrop" onclick="closeModal()"></div>
+      <div class="glass modal-content">
+        <button class="modal-close" onclick="closeModal()">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <svg
+          width="36"
+          height="36"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="none"
+          style="color: var(--accent)"
+        >
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+          />
+        </svg>
+        <h3>For You, With Love</h3>
+        <p>
+          Dunmi, I don't even know where to start. I just wanted to take a moment to let you know how truly special you
+          are. Meeting you is something i don't think i'll regret, you really are something.
+          Your warmth, your laughter, and the way you light up my mood every single time,
+           it's something I never take for granted. I love you more than you think. I always enjoy those late night calls with you even though 
+           it may or may not have been a waste, well that's not the point of this. I know we've been through some 
+           Ups and Downs but regardless you still stayed. <br>
+           After our whole conversations about what we have going on, i thought i wanted to leave but 
+           i don't just know, something just keeps me staying. Even though what we have right now is sure for me 
+           but you already have me hooked, i didn't know if i wanted to do this valentines stuff but i had to let 
+           you know how much you mean to me. You broke my heart but i understand. just figure out what you really want.
+           But I still love you so i'll stay as long as i can till you figure it out. If you don't do that soon enough,
+            that's on You. I don't mean to tir up anything, i'm just saying
+                  </p>
+        <p>
+          Thank you for being you. Thank you for coming into my life. <br> Happy Valentine's Day 
+          Dunmininu Michelle Semilogo Bankole 💕 <br>
+          If you want i can change your last name💕
+          I love you💕
+        </p>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            opacity: 0.4;
+            margin-top: 0.5rem;
+          "
+        >
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            stroke="none"
+            style="color: var(--primary)"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+            />
+          </svg>
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            stroke="none"
+            style="color: var(--accent)"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+            />
+          </svg>
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            stroke="none"
+            style="color: var(--primary)"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script>
+      // ===== Floating Hearts =====
+      (function () {
+        const container = document.getElementById("floatingHearts");
+        const heartPath =
+          "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z";
+        const hearts = [
+          {
+            size: 16,
+            left: "5%",
+            top: "10%",
+            opacity: 0.08,
+            anim: "anim-float",
+            delay: "0s",
+            filled: true,
+          },
+          {
+            size: 28,
+            left: "15%",
+            top: "25%",
+            opacity: 0.06,
+            anim: "anim-drift",
+            delay: "1s",
+            filled: false,
+          },
+          {
+            size: 12,
+            left: "80%",
+            top: "8%",
+            opacity: 0.1,
+            anim: "anim-wobble",
+            delay: "0.5s",
+            filled: true,
+          },
+          {
+            size: 22,
+            left: "90%",
+            top: "30%",
+            opacity: 0.07,
+            anim: "anim-float-slow",
+            delay: "2s",
+            filled: false,
+          },
+          {
+            size: 18,
+            left: "70%",
+            top: "60%",
+            opacity: 0.06,
+            anim: "anim-drift",
+            delay: "1.5s",
+            filled: true,
+          },
+          {
+            size: 32,
+            left: "10%",
+            top: "70%",
+            opacity: 0.05,
+            anim: "anim-float",
+            delay: "3s",
+            filled: false,
+          },
+          {
+            size: 14,
+            left: "50%",
+            top: "15%",
+            opacity: 0.08,
+            anim: "anim-wobble",
+            delay: "0.8s",
+            filled: false,
+          },
+          {
+            size: 24,
+            left: "35%",
+            top: "80%",
+            opacity: 0.06,
+            anim: "anim-float-slow",
+            delay: "2.5s",
+            filled: true,
+          },
+          {
+            size: 10,
+            left: "60%",
+            top: "45%",
+            opacity: 0.09,
+            anim: "anim-drift",
+            delay: "1.2s",
+            filled: false,
+          },
+          {
+            size: 20,
+            left: "25%",
+            top: "50%",
+            opacity: 0.05,
+            anim: "anim-float",
+            delay: "4s",
+            filled: true,
+          },
+          {
+            size: 26,
+            left: "85%",
+            top: "75%",
+            opacity: 0.06,
+            anim: "anim-wobble",
+            delay: "3.5s",
+            filled: false,
+          },
+          {
+            size: 15,
+            left: "45%",
+            top: "90%",
+            opacity: 0.07,
+            anim: "anim-float-slow",
+            delay: "1.8s",
+            filled: true,
+          },
+        ];
+        hearts.forEach(function (h) {
+          var div = document.createElement("div");
+          div.className = h.anim;
+          div.style.position = "absolute";
+          div.style.left = h.left;
+          div.style.top = h.top;
+          div.style.opacity = h.opacity;
+          div.style.animationDelay = h.delay;
+          div.innerHTML =
+            '<svg width="' +
+            h.size +
+            '" height="' +
+            h.size +
+            '" viewBox="0 0 24 24" fill="' +
+            (h.filled ? "currentColor" : "none") +
+            '" stroke="currentColor" stroke-width="2"><path d="' +
+            heartPath +
+            '"/></svg>';
+          container.appendChild(div);
+        });
+      })();
+      // ===== Modal =====
+      function openModal() {
+        document.getElementById("messageModal").classList.add("active");
+      }
+      function closeModal() {
+        document.getElementById("messageModal").classList.remove("active");
+      }
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeModal();
+      });
+    </script>
+  </body>
+</html>
